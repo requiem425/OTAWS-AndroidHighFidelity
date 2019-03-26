@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'header_bar.dart';
 
+const SIUERed = const Color(0xFFe41c24);
 class LandingPage extends StatelessWidget{
-  final SIUERed = const Color(0xFFe41c24);
+
 
   @override
   Widget build(BuildContext context){
@@ -28,9 +29,24 @@ Widget __center(){
       Image.asset(
         'assets/temp_cover.jpg',
         fit: BoxFit.contain,
-
       ),
-      Text('Deliver features faster', textAlign: TextAlign.center),
+      buttons,
     ],
   );
 }
+
+final buttons = new Container(
+  child: new Row(
+    children: <Widget>[
+      new RaisedButton(
+        child: const Text('Testing'),
+        color: SIUERed,
+        elevation: 4.0,
+        splashColor: Colors.white10,
+        onPressed: (){
+
+        }
+      ),
+    ],
+  ),
+);
